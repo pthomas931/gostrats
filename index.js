@@ -18,15 +18,23 @@ client.on("ready", () => {
 
 // Create an event listener for messages
 client.on("message", message => {
-  if (message.content.includes("/gostrats")) {
+  if (message.content.startsWith("/gostrats")) {
     try {
+      console.log(JSON.stringify(message.content.split(" ")));
+      if (message.content.split(" ").length < 3) {
+        message.channel.send("Need a strat? Try `/gostrats [map] [# players]`");
+        message.channel.send(`-- maps: ${Object.keys(STRATS).join(", ")}`);
+
+        return;
+      }
+
       const [command, map, playerCountStr] = message.content.split(" ");
-      const playerCount = Number.parseInt(playerCountStr) - 1;
+      const playerCount = Number.parseInt(playerCountStr);
 
       message.channel.send(`Fetching strat for ${map} - ${playerCount}...`);
 
       if (STRATS[map]) {
-        const theseStrats = STRATS[map][playerCount];
+        const theseStrats = STRATS[map][playerCount - 1];
         console.log("theseStrats: ", theseStrats);
         if (
           theseStrats &&
