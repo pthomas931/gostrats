@@ -3,6 +3,8 @@ const Discord = require("discord.js");
 
 const STRATS = require("./strats.json");
 
+require("dotenv").config();
+
 // Create an instance of a Discord client
 const client = new Discord.Client();
 
@@ -55,4 +57,4 @@ client.on("message", message => {
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login("TOKEN");
+client.login(process.env.CLIENT_TOKEN);
