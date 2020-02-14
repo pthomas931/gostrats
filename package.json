@@ -1,0 +1,30 @@
+{
+  "name": "gostrats",
+  "version": "1.0.0",
+  "description": "Discord bot to provide CSGO Strategies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pthomas931/gostrats.git"
+  },
+  "keywords": [
+    "discord",
+    "csgo",
+    "bot",
+    "strats",
+    "strategies"
+  ],
+  "author": "Phillip Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pthomas931/gostrats/issues"
+  },
+  "homepage": "https://github.com/pthomas931/gostrats#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
