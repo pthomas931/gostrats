@@ -6,7 +6,15 @@
         "players": ["Don't die, try this smoke https://giphy.com/RickRoll"]
       }
     ],
-    [],
+    [
+      {
+        "overview": "New two person strategy.",
+        "players": [
+          "First guy do a thing",
+          "Second guy do a thing",
+        ]
+      }
+    ],
     [
       {
         "overview": "Take boiler and apps control through alt-mid",
